@@ -1,5 +1,5 @@
 
-<div class="list" style="text-align: center; margin: 100px 600px 0;width: 500px;">
+<div class="list" style="text-align: center; margin: 0 120px; width: 500px;">
   <h3>Thêm danh mục sản phẩm</h3>
   <table border="1" style="border-collapse: collapse; width: 100%; border: 5px solid #f89b9b;">
   <form action="modules/quanlydanhmucSP/xuly.php" method="POST">

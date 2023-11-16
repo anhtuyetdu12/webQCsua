@@ -1,6 +1,6 @@
 
-<div class="insert" style="width: 500px;margin: 100px 400px 0;background-color: #eccdcd;">
-  <h2 style="background-color: #eb6565;color:#fff;text-align: center; padding: 5px 0;">THÊM SỮA MỚI</h2>
+<div class="insert" style="width: 500px;background-color: #eccdcd;">
+  <h2 style="background-color: #eb6565;color:#fff;text-align: center;margin: 0 120px; padding: 5px 0;">THÊM SỮA MỚI</h2>
   <table width=100%>
       <form action="modules/quanlySanPham/xuly.php" method="POST" enctype="multipart/form-data">
       <tr style="margin: 20px 0;">

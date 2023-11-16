@@ -16,7 +16,7 @@
     }
 ?>
 <body>
-    <h3 class="title_admin">Wellcome to Admin</h3>
+    <!-- <h3 class="title_admin">Wellcome to Admin</h3> -->
     <div class="wrapper">
         <?php
             include("config/config.php");

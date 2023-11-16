@@ -127,4 +127,3 @@
         header('Location:../../index.php?quanly=giohang');
         // print_r($_SESSION['cart']);
     }
-?>

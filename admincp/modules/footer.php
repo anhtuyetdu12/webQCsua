@@ -1,1 +1,3 @@
-<p>fotter admin</p>
+<div class="footer">
+    footer
+</div>

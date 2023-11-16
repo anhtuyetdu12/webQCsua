@@ -228,9 +228,9 @@ ul.list-sidebar li a{
 }
 .price-new{
     color: #e74a67;
-    font-size: 1.2rem;
-    margin-left: 120px;
-
+    font-size: 1.1rem;
+    margin-left: 100px;
+    margin-top: -20px;
 }
 .action-product{
     display: flex;
@@ -351,6 +351,37 @@ i.like-icon-fill{
     background-color: #fff;
     border-top: 2px dashed #ecca6c;
     padding: 0;
+}
+.footer__pay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -5px;
+    margin-right: -5px;
+    
+}
+.footer__pay-link{
+    display: block;
+    position: relative;
+    width: 58px;
+    margin-top: 7px;
+    margin-right: 7px;
+    text-decoration: none;
+    background-color: var(--while-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0, 0.1);
+    transition: transform ease-in 0.1s;
+    will-change: transform;
+
+}
+
+.footer__pay-link-img{
+    margin: 5px 3px 0 3px;
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+
 }
 .list-footer{
     display: flex;

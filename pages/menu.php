@@ -1,7 +1,7 @@
 <!-- Thanh menu -->
 <?php
     if(isset($_GET['dangxuat']) && $_GET['dangxuat']==1){
-        unset($_SESSION['dangky']);
+        unset($_SESSION['dangnhap']);
     }
 ?>
 <div class="menu">
@@ -23,9 +23,9 @@
             <i class="menu-icons fa-solid fa-cart-shopping"></i>
             Giỏ hàng</a>
         </li>
-        <!-- tồn tại đky => đăng xuất, kh thì trở laị trang đki -->
+        <!-- tồn tại đnhap => đăng xuất, kh thì trở laị trang đki -->
         <?php
-            if(isset($_SESSION['dangky'])){
+            if(isset($_SESSION['dangnhap'])){
         ?>
         <li><a href="index.php?dangxuat=1">
             <i class="menu-icons fa-solid fa-right-from-bracket"></i>
@@ -34,9 +34,9 @@
         <?php
             }else{
         ?>
-        <li><a href="index.php?quanly=dangky">
+        <li><a href="index.php?quanly=dangnhap">
             <i class="menu-icons fa-solid fa-user"></i>
-            Đăng ký</a>
+            Đăng nhập</a>
         </li>
         <?php
             }

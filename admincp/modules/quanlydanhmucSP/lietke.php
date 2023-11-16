@@ -4,7 +4,7 @@
 ?>
 
 <p>Liệt kê danh mục sản phẩm</p>
-<table border="1" style="width: 100%; border-collapse:collapse;">
+<table border="1" style="width: 90%; border-collapse:collapse;">
     <tr>
         <th>Id</th>
         <th>Tên danh mục</th>

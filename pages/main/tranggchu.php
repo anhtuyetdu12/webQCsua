@@ -29,7 +29,7 @@
                 <i class="star-gold fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <span class="sold"><?php echo number_format($row['soluong']).' đã bán' ?></span>
+         
         </div>
 
         <div class="origin">

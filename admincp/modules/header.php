@@ -5,9 +5,12 @@ if (isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1) {
     header('Location:login.php');
 }
 ?>
-
-<p style="color: palevioletred;"><a href="index.php?dangxuat=1" style="margin: 0 10px; text-decoration: none; color: palevioletred; ">
-    Đăng xuất: </a>
-    <?php if (isset($_SESSION['dangnhap'])) {
-        echo $_SESSION['dangnhap'];
-    } ?></p>
+<div class="heading" >
+    <p style="color: #fff; padding: 6px 10px;">
+        <a href="index.php?dangxuat=1" style=" text-decoration: none; color: #fff;">
+            Đăng xuất: </a>
+        <?php if (isset($_SESSION['dangnhap'])) {
+            echo $_SESSION['dangnhap'];
+        } ?>
+    </p>
+</div>

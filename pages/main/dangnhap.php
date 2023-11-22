@@ -1,20 +1,18 @@
 <?php
 if (isset($_POST['dangnhap'])) {
     $email = $_POST['email'];
-    $matkhau = $_POST['matkhau'];
-    $matkhau1 = md5($matkhau);
-    $sql =  "SELECT count(*) as dem FROM tbl_dangky WHERE email = '".$email."' AND maukhau = '".$matkhau1."' ";
-    $query = mysqli_query($mysqli, $sql);
-    $row = mysqli_fetch_assoc($query);
-    if ($row["dem"] > 0) {
-        // $row_data = mysqli_fetch_array($row);
-        // $_SESSION['dangky'] = $row_data['tenkhachhang'];
-        // $_SESSION['id_khachhang'] = $row_data['id_dangky'];
-        echo '<span style="color:green;">Đăng nhập thành công</span>';
-        header('Location:index.php?quanly=giohang');
+    $matkhau = md5($_POST['matkhau']);
+    $sql =  "SELECT * FROM tbl_dangky WHERE email = '".$email."' AND maukhau = '".$matkhau."' ";
+    $row = mysqli_query($mysqli, $sql);
+    $count = mysqli_num_rows($row);
+    if ($count > 0) {
+        $row_data = mysqli_fetch_array($row);
+        $_SESSION['user'] = $row_data['email'];
+        echo '<script> alert("Đăng nhập thành công !")</script>';
+        header('Location:index.php?quanly=tranggchu');
     } else {
-        echo '<p style="color:red;">Tài khoản hoặc mật khẩu không đúng.Vui lòng nhập lại !</p>';
-        header('Location:login.php');
+        echo '<script> alert("Tài khoản hoặc mật khẩu không đúng.Vui lòng nhập lại !")</script>';
+        header('Location:Location:index.php?quanly=dangnhap');
     }
     // session_destroy();
 
@@ -305,7 +303,7 @@ if (isset($_POST['dangnhap'])) {
 
                     <div class="auth-controls">
                         <input type="button" class="btn btn-back btn--normal" name="trolai" value="TRỞ LẠI" style="width: 155px;" onclick="backhome()">
-                        <input type="submit" class="btn btn-primary" name="dangky" value="ĐĂNG NHẬP">
+                        <input type="submit" class="btn btn-primary" name="dangnhap" value="ĐĂNG NHẬP">
                     </div>
 
                 </div>

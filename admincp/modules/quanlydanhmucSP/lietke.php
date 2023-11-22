@@ -3,8 +3,8 @@
     $query_lietke_danhmucsp = mysqli_query($mysqli,$sql_lietke_danhmucsp);
 ?>
 
-<p>Liệt kê danh mục sản phẩm</p>
-<table border="1" style="width: 90%; border-collapse:collapse;">
+<p>Danh mục sản phẩm</p>
+<table border="1" style="width: 90%; border-collapse:collapse;text-align: center;">
     <tr>
         <th>Id</th>
         <th>Tên danh mục</th>
@@ -20,8 +20,8 @@
         <td><?php echo $row['tendanhmuc'] ?></td>
         
         <td>
-            <a href="modules/quanlydanhmucSP/xuly.php?iddanhmuc=<?php echo $row['iddanhmuc'] ?>" onclick="return confirm('Bạn có đồng ý xóa không?')">Xóa</a> | 
-            <a href="?action=quanlyDanhMucSP&query=sua&iddanhmuc=<?php echo $row['iddanhmuc'] ?>">Sửa</a>
+            <a href="modules/quanlydanhmucSP/xuly.php?iddanhmuc=<?php echo $row['iddanhmuc'] ?>" onclick="return confirm('Bạn có đồng ý xóa không?')" style="color: #db1165;text-decoration: none;">Xóa</a> | 
+            <a href="?action=quanlyDanhMucSP&query=sua&iddanhmuc=<?php echo $row['iddanhmuc'] ?>" style="color: #db1165;text-decoration: none;">Sửa</a>
         </td>
     </tr>
     <?php 

@@ -3,7 +3,7 @@
     $query_sua_danhmucsp = mysqli_query($mysqli, $sql_sua_danhmucsp);
 ?>
 
-<div class="list" style="text-align: center; margin: 100px 600px 0;width: 500px;">
+<div class="list" style="text-align: center; margin: 50px 200px 0;width: 500px;">
   <h3>Sửa danh mục sản phẩm</h3>
   <table border="1" style="border-collapse: collapse; width: 100%; border: 5px solid #f89b9b;">
     <form action="modules/quanlydanhmucSP/xuly.php?iddanhmuc=<?php echo $_GET['iddanhmuc'] ?>" method="POST">     
@@ -23,7 +23,7 @@
       </tr>
       <tr style="height: 50px;">
           <td colspan="2" style="text-align: center;">
-              <input type="submit" value="Sửa danh mục sản phẩm" name="suadanhmuc" style="margin: 5px 0;padding: 5px 5px;background-color: #f89b9b; border: none; border-radius: 3px;">
+              <input type="submit" value="Sửa danh mục sản phẩm" name="suadanhmuc" style="margin: 5px 0;padding: 5px 5px;background-color: #f89b9b; border: none; border-radius: 3px;font-size: 1rem; font-weight: bold;">
           </td>
       </tr>
       <?php

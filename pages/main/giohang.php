@@ -1,12 +1,6 @@
 <p>Giỏ hàng</p>
 
 <?php
-if (isset($_SESSION['dangky'])) {
-    echo 'xin chào: ' . '<span style="color: red;">' . $_SESSION['dangky'] . '</span>';
-}
-?>
-
-<?php
 
 if (isset($_SESSION['cart'])) {
 

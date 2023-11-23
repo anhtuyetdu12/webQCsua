@@ -4,22 +4,21 @@
     $query_lietke_sp = mysqli_query($mysqli,$sql_lietke_sp);
 ?>
 
-<p>Liệt kê danh mục sản phẩm</p>
-<table border="1" style="width: 100%; border-collapse:collapse;border: 5px double #f89b9b;">
+<p>Danh sách sản phẩm</p>
+<table border="1" style="width: 100%; border-collapse:collapse;border: 5px double #f89b9b;margin-right: 100px;">
     <tr>
-        <th>Id</th>
+        <th>STT</th>
         <th>Mã Sữa</th>
         <th>Tên Sữa</th>
         <th>Hãng Sữa</th>
         <th>Loại Sữa</th>
-        <th width="150px">Trọng Lượng</th>
+        <th>Trọng Lượng</th>
         <th >Đơn Giá</th>
-        <th width="300px">Thành Phần dd</th>
-        <th width="300px">Lợi Ích</th>
+        <th >Thành Phần dd</th>
+        <th >Lợi Ích</th>
         <th>Danh mục</th>
         <th>Giảm giá</th>
-        <th>Số lượng bán</th>
-        <th width="100px">Hình Ảnh</th>      
+        <th width="80px">Hình Ảnh</th>      
         <th>Thao Tác</th>
     </tr>
     <?php
@@ -39,11 +38,10 @@
         <td><?php echo $row['loiich'] ?></td>
         <td><?php echo $row['tendanhmuc'] ?></td>
         <td><?php echo $row['giamgia'] ?></td>
-        <td><?php echo $row['soluong'] ?></td>
-        <td><img src="modules/quanlySanPham/uploads/<?php echo $row['hinhanh'] ?>" width="150px"  style="height: 150px;"></td>        
+        <td><img src="modules/quanlySanPham/uploads/<?php echo $row['hinhanh'] ?>" width="100px"  style="height: 100px;"></td>        
         <td>
-            <a href="modules/quanlysanpham/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>" onclick="return confirm('Bạn có đồng ý xóa không?')">Xóa</a> | 
-            <a href="?action=quanlysanpham&query=sua&idsanpham=<?php echo $row['id_sanpham'] ?>">Sửa</a>
+            <a href="modules/quanlysanpham/xuly.php?idsanpham=<?php echo $row['id_sanpham'] ?>" onclick="return confirm('Bạn có đồng ý xóa không?')" style="color: palevioletred; text-decoration: none;">Xóa</a> | 
+            <a href="?action=quanlysanpham&query=sua&idsanpham=<?php echo $row['id_sanpham'] ?>" style="color: palevioletred; text-decoration: none;">Sửa</a>
         </td>
         
     </tr>

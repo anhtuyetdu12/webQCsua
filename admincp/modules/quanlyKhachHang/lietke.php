@@ -7,7 +7,7 @@
 <p style="margin: 20px 200px;">Danh sách khách hàng</p>
 <table border="1" style="width: 80%; border-collapse:collapse;border: 5px double orangered; margin: 0 200px;">
     <tr>
-        <th>Id</th>
+        <th>STT</th>
         <th>Mã KH</th>
         <th>Tên KH</th>
         <th>Giới tính</th>
@@ -30,8 +30,8 @@
         <td><?php echo $row['sodienthoai'] ?></td>
         <td><?php echo $row['email'] ?></td>
         <td>
-            <a href="modules/quanlykhachhang/xuly.php?key=<?php echo $row['id_khachhang'] ?>" onclick="return confirm('Bạn có đồng ý xóa không?')">Xóa</a> | 
-            <a href="?action=quanlykhachhang&query=sua&key=<?php echo $row['id_khachhang'] ?>">Sửa</a>
+            <a href="modules/quanlykhachhang/xuly.php?key=<?php echo $row['id_khachhang'] ?>" onclick="return confirm('Bạn có đồng ý xóa không?')" style="color: orangered; text-decoration: none;">Xóa</a> | 
+            <a href="?action=quanlykhachhang&query=sua&key=<?php echo $row['id_khachhang'] ?>" style="color: orangered; text-decoration: none;">Sửa</a>
         </td>
         
     </tr>

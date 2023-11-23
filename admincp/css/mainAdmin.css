@@ -45,6 +45,7 @@
     height: auto;
     width: 100%;
     float: right;
+    margin-bottom: 40px;
 }
 .menu-admincp ul{
     margin: 0px;
@@ -63,7 +64,7 @@
     margin: 10px 10px;
 }
 .clear{
-    clear: none ;
+    clear: both ;
 }
 .title_admin{
     text-align: center;
@@ -74,7 +75,56 @@
 .footer{
     height: 150px;
     width: 100%;
+    background-color: #fff;
+    border-top: 2px dashed #ecca6c;
     padding: 0;
-    clear: both ;
+}
+.footer__pay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 245px;
+    margin: 10px -5px;
+    
+}
+.footer__pay img{
+    margin-right:6px;
 
+}
+.pay-pic{
+    margin: 5px ;
+}
+.list-footer{
+    display: flex;
+    margin: 20px;
+
+}
+.one{
+    margin: 0 40px;
+    text-align: left;
+
+}
+.head-footer{
+    color: #0048a4;
+
+}
+.list-footer ul li{
+    list-style: none;
+    margin: 10px 10px;
+}
+.list-footer ul li a{
+    text-decoration: none;
+    color: #555;
+}
+.footer-icon{
+    color: #555;
+    font-size: 12px;
+}
+/* cuoi */
+.note{
+    color: #757575;
+    background-color: #e6d2da;
+    text-align: center;
+    padding: 10px 0;
+    
 }

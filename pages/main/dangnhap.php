@@ -2,17 +2,17 @@
 if (isset($_POST['dangnhap'])) {
     $email = $_POST['email'];
     $matkhau = md5($_POST['matkhau']);
-    $sql =  "SELECT * FROM tbl_dangky WHERE email = '".$email."' AND maukhau = '".$matkhau."' ";
+    $sql =  "SELECT * FROM tbl_dangky WHERE email = '" . $email . "' AND maukhau = '" . $matkhau . "' LIMIT 1";
     $row = mysqli_query($mysqli, $sql);
     $count = mysqli_num_rows($row);
     if ($count > 0) {
         $row_data = mysqli_fetch_array($row);
         $_SESSION['user'] = $row_data['email'];
         echo '<script> alert("Đăng nhập thành công !")</script>';
-        header('Location:index.php?quanly=tranggchu');
+        header('Location:../index.php');
     } else {
         echo '<script> alert("Tài khoản hoặc mật khẩu không đúng.Vui lòng nhập lại !")</script>';
-        header('Location:Location:index.php?quanly=dangnhap');
+        header('Location:index.php?quanly=dangnhap');
     }
     // session_destroy();
 
@@ -253,25 +253,13 @@ if (isset($_POST['dangnhap'])) {
 </style>
 <div class="modal">
     <div class="modal-overlay"></div>
-    <script>
-        // Hàm xử lý khi nhấn nút "Đăng ký"
-        function register() {
-            // Chuyển hướng đến trang đăng ký PHP
-            window.location.href = 'index.php?quanly=dangky';
-        }
 
-        function backhome() {
-            // Chuyển hướng đến trang đăng ký PHP
-            window.location.href = 'index.php';
-        }
-        
-    </script>
     <div class="modal-body">
 
 
         <!-- login : dang nhap -->
         <div class="auth-form">
-            <form action="" method="POST" >
+            <form action="" method="POST">
                 <div class="auth-container">
                     <div class="auth-header">
                         <h3 class="heading-login">Đăng nhập</h3>
@@ -322,3 +310,15 @@ if (isset($_POST['dangnhap'])) {
         </div>
     </div>
 </div>
+<script>
+    // Hàm xử lý khi nhấn nút "Đăng ký"
+    function register() {
+        // Chuyển hướng đến trang đăng ký PHP
+        window.location.href = 'index.php?quanly=dangky';
+    }
+
+    function backhome() {
+        // Chuyển hướng đến trang đăng ký PHP
+        window.location.href = 'index.php';
+    }
+</script>

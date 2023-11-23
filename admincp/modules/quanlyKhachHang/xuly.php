@@ -16,19 +16,14 @@ if (isset($_POST['themmoi'])) {
 } else if (isset($_POST['suakh'])) {
     //sua
 
-    $sql_update = "UPDATE tbl_khachhang SET masua ='" . $masua . "', tensua= '" . $tensua . "' , hangsua ='" . $hangsua . "' , loaisua ='" . $loaisua . "' , trongluong ='" . $trongluong . "' 
-                , dongia ='" . $dongia . "' , tpdd ='" . $tpdd . "' , loiich ='" . $loiich . "' , iddanhmuc ='" . $danhmucSP . "' , giamgia ='" . $giamgia . "' , soluong ='" . $soluong . "'  WHERE id_sanpham = '$_GET[idsanpham]'";
+    $sql_update = "UPDATE tbl_khachhang SET maKH ='" . $maKH . "', tenKH= '" . $tenKH . "' , gioitinh ='" . $gioitinh . "' , diachi ='" . $diachi . "' , sodienthoai ='" . $sodienthoai . "' 
+                , email ='" . $email . "' WHERE id_khachhang = '$_GET[key]'";
     mysqli_query($mysqli, $sql_update);
     header('Location:../../index.php?action=quanlykhachhang&query=them');
 } else {
     //xoa
-    $id = $_GET['idsanpham'];
-    $sql = "SELECT * FROM tbl_khachhang WHERE id_sanpham = '" . $id . "' LIMIT 1";
-    $query = mysqli_query($mysqli, $sql);
-    while ($row = mysqli_fetch_array($query)) {
-        unlink('uploads/' . $row['hinhanh']);
-    }
-    $sql_xoa = "DELETE FROM tbl_khachhang WHERE id_sanpham = '" . $id . "' ";
+    $id = $_GET['key'];
+    $sql_xoa = "DELETE FROM tbl_khachhang WHERE id_khachhang = '" . $id . "' ";
     mysqli_query($mysqli, $sql_xoa);
     header('Location:../../index.php?action=quanlykhachhang&query=them');
 }

@@ -76,7 +76,7 @@
 }
 /* header */
 .header{
-    height: 80px;
+    height: 50px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -356,32 +356,16 @@ i.like-icon-fill{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-left: -5px;
-    margin-right: -5px;
+    width: 245px;
+    margin: 10px -5px;
     
 }
-.footer__pay-link{
-    display: block;
-    position: relative;
-    width: 58px;
-    margin-top: 7px;
-    margin-right: 7px;
-    text-decoration: none;
-    background-color: var(--while-color);
-    border-radius: 2px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0, 0.1);
-    transition: transform ease-in 0.1s;
-    will-change: transform;
+.footer__pay img{
+    margin-right:6px;
 
 }
-
-.footer__pay-link-img{
-    margin: 5px 3px 0 3px;
-    border-radius: 2px;
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-
+.pay-pic{
+    margin: 5px ;
 }
 .list-footer{
     display: flex;

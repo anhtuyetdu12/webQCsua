@@ -33,13 +33,15 @@
         <div class="one">
             <h3 class="head-footer">Phương Thức Thanh Toán</h3>
             <div class="footer__pay">
-            <img class="" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/visa-pay.png" height="24" alt="Visa Pay">
-            <img class="" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/mastercard-pay.png" height="24" alt="Visa Pay">
-            <img class="" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/jcb-pay.png" height="24" alt="Visa Pay">
-            <img class="" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/atm-pay.png" height="24" alt="Visa Pay">
-            <img class="" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/cod.png" height="24" alt="Visa Pay">
-            <img class=" mt-10" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/vnpay.png" height="24" alt="Visa Pay">
-            <img class=" mt-10" style="margin-right:6px;" src="https://cdn1.concung.com/themes/desktop4.1/image/v40/style/zalo-pay.png" height="24" alt="Visa Pay">
+            <img class="pay-pic" src="img/visa.png" alt="Visa Pay" height="20px">
+            <img class="pay-pic" src="img/tron.png" alt="tron Pay" height="20px">
+            <img class="pay-pic" src="img/jcb.png" alt="jcb Pay" height="20px">
+            <img class="pay-pic" src="img/cop.png" alt="cod Pay" height="20px">
+            <img class="pay-pic" src="img/later.png" alt="Visa Pay" height="20px">
+            <img class="pay-pic" src="img/gop.png" alt="Visa Pay" height="20px">
+            <img class="pay-pic" src="img/vnpay.png" alt="Visa Pay" height="22px">
+            <img class="pay-pic" src="img/momo.png" alt="Visa Pay" height="35px">
+
 
 
             </div>

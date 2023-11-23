@@ -1,1 +1,1 @@
-<p>Thông báo</p>
+<p>Chưa có thông báo</p>

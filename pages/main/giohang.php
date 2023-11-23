@@ -77,7 +77,7 @@ if (isset($_SESSION['cart'])) {
 
             ?>
                 <div class="no-cart">
-                    <img src="../../img/no-cart.png" alt="giỏ hàng trống">
+                    <img src="img/no-cart.png" alt="giỏ hàng trống" width="90%" height="auto">
                     <p>Hiện tại giỏ hàng trống</p>
                 </div>
 

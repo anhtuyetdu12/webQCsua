@@ -1,26 +1,24 @@
 <?php
-    if (isset($_POST['dangky'])) {
-        $tenkhachhang = $_POST['hovaten'];
-        $email = $_POST['email'];
-        $dienthoai = $_POST['dienthoai'];
-        $matkhau = md5($_POST['matkhau']);
-        $nhaplaiMK = md5($_POST['NhaplaiMK']);
-        $row = "INSERT INTO tbl_dangky(tenkhachhang,email,dienthoai,matkhau,nhaplaiMK) VALUES('". $tenkhachhang."', '".$email."' , '".$dienthoai."', '".$matkhau."', '".$nhaplaiMK."') ";
-        $sql_dangky =  mysqli_query($mysqli, $row);
-        if ($sql_dangky){
-            echo '<p style="color: green;">Bạn đã đăng ký thành công</p>';
-            $_SESSION['dangky'] = $tenkhachhang;
-            //đki tài khoản mới => tự tăng id
-            // $_SESSION['id_khachhang'] = mysqli_insert_id($mysqli);
-
-            header('Location: index.php?quanly=dangnhap');
-        }else{
-            echo "Da ton tai nguoi dung trong he thong";
-        }
-        // session_destroy();
-
+if (isset($_POST['dangky'])) {
+    $tenkhachhang = $_POST['hovaten'];
+    $email = $_POST['email'];
+    $dienthoai = $_POST['dienthoai'];
+    $matkhau = md5($_POST['matkhau']);
+    $nhaplaiMK = md5($_POST['NhaplaiMK']);
+    $row = "INSERT INTO tbl_dangky(tenkhachhang,email,dienthoai,matkhau,nhaplaiMK) VALUES('" . $tenkhachhang . "', '" . $email . "' , '" . $dienthoai . "', '" . $matkhau . "', '" . $nhaplaiMK . "') ";
+    $sql_dangky =  mysqli_query($mysqli, $row);
+    if ($sql_dangky) {
+        echo '<p style="color: green;">Bạn đã đăng ký thành công</p>';
+        $_SESSION['dangky'] = $tenkhachhang;
+        header('Location: index.php?quanly=dangnhap');
+    } else {
+        echo "Da ton tai nguoi dung trong he thong";
+        header('Location: index.php?quanly=dangky');
     }
- 
+    // session_destroy();
+
+}
+
 ?>
 <style>
     * {
@@ -123,6 +121,7 @@
         border-color: #e74a67;
         box-shadow: 0 0 5px #e74a67;
     }
+
     .policy {
         font-size: 15px;
         line-height: 1.4rem;
@@ -250,20 +249,7 @@
 </style>
 <div class="modal">
     <div class="modal-overlay"></div>
-    <script>
-        // Hàm xử lý khi nhấn nút "Đăng ký"
-        function login() {
-            // Chuyển hướng đến trang đăng nhap PHP
-            window.location.href = 'index.php?quanly=dangnhap';
-        }
 
-        function backhome() {
-            // Chuyển hướng đến trang index.php
-            window.location.href = 'index.php';
-        }
-
-        
-    </script>
     <div class="modal-body">
         <!-- register : dang ky -->
         <div class="auth-form">
@@ -321,6 +307,18 @@
             </form>
         </div>
 
-        
+
     </div>
 </div>
+<script>
+    // Hàm xử lý khi nhấn nút "Đăng ký"
+    function login() {
+        // Chuyển hướng đến trang đăng nhap PHP
+        window.location.href = 'index.php?quanly=dangnhap';
+    }
+
+    function backhome() {
+        // Chuyển hướng đến trang index.php
+        window.location.href = 'index.php';
+    }
+</script>

@@ -1,5 +1,5 @@
 
-<div class="list" style="text-align: center; margin: 0 120px; width: 500px;">
+<div class="list" style="text-align: center; margin: 0 500px; width: 500px;">
   <table border="1" style="border-collapse: collapse; width: 100%; border: 5px solid #f89b9b; margin: 50px 0;">
   <form action="modules/quanlydanhmucSP/xuly.php" method="POST">
       <tr>
